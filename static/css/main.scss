@@ -1,0 +1,200 @@
+{% load static%}
+
+$newcolor: #aaaa;
+$colors: (
+    text-color: #ffffff,
+    secondary: #baba,
+    navbar-color: #666666,
+    pic-warm: #ff9f80
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+@mixin desktop{
+    @media (min-width: #{$desktop}){
+    @content;
+    }
+}
+
+body, html{
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Montserrat';
+}
+body{
+    animation: fadeIn 2s;
+    #bg{
+        background-image: ("{% static '/images/bg.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        #heading{    
+            display: block;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 15px #000;
+            text-align: center;
+            color: color(text-color);
+            position: relative;
+            top: 30%;
+    
+            h1{
+                font-size: 4vw;
+                margin-bottom: 0;
+            }
+            .subtitle{
+                opacity: 0.8;
+                font-size: 1.3vw;
+            }
+        }
+    }
+    #section2{
+        z-index:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: ("{% static '/images/rozhen.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        height: 80%;
+        opacity: 0.8;
+
+        .container{
+            z-index: 1;
+            background-color: #000;
+            opacity: 0.5;
+            text-align: center;
+            color:color(text-color);
+        }
+    }
+    .fa-clock, .fa-compass{
+        font-size: 4em;
+        color: color(pic-warm);
+    } 
+    #publications{
+        h1,h3{
+            color: color(pic-warm);
+        }
+        #main_bg_img{
+            display: inline-block;
+            opacity: 0.5;
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+            height: 300px;
+        }
+
+    }
+    #section3{
+        hr{
+            width: 60%;
+            border-top: 2px solid color(pic-warm);
+            margin-left: 0;
+        }
+    }
+    #section3{
+        .card{
+            width: 25rem;
+            margin-top: 50px;
+            box-shadow: 0 4px 2px 1px rgba(0,0,0,0.1);
+        }
+        .card-body{
+            min-height: 250px;
+        }
+        .card-img-top{
+            max-height: 100px;
+            height: auto;
+            width: auto;
+        }
+        .card-header{
+            color:color(pic-warm);
+            font-weight:bold;
+            font-size: 22px;;
+            text-align: center;
+            padding: 15px;
+        }
+        #card-img{
+            background-image: ("{% static '/images/try.jpg' %}");
+            background-size: cover;
+            margin:10px;
+        }
+        #card-webcam{
+            background-image:url("http://195.96.236.3:3007/images/snapshot.jpg");
+            background-size: cover;
+            margin:10px;
+        }
+        #drawing{
+            height: 450px;
+        }
+    }
+    
+}
+
+.navbar{
+    padding: 0.8rem;
+    overflow: visible !important;
+    .navbar-nav li{
+    padding-right: 20px;
+    }
+    .nav-link{
+    font-size: 1.1em !important;
+    font-weight: bold;
+    }
+    .dropdown-menu{
+        background-color: transparent;
+        border: none;
+
+        .dropdown-item{
+            color: color(text-color);
+        }
+        .dropdown-item:hover{
+            background-color: transparent;
+            color: color(secondary);
+        }
+    }
+}
+footer{
+    justify-content: space-around;
+    min-height:25%;
+    background-color:#343a40;
+    color:color(text-color);
+    padding: 50px;
+    #phone{
+        color:color(pic-warm);
+    }
+    #map{
+        width: 100%;
+        height: 250px;
+        border: solid 1px white;
+        padding: 3px;
+    }
+    p{
+        margin:0;
+    }
+    a{
+        color: white;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
