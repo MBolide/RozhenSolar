@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/JavaScript/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/main.js":
-/*!************************!*\
-  !*** ./src/js/main.js ***!
-  \************************/
+/***/ "./src/JavaScript/main.js":
+/*!********************************!*\
+  !*** ./src/JavaScript/main.js ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("(function($){\r\n    var header = $('#title'),\r\n        sub = $('.subtitle'),\r\n        nav = $('#navbar');\r\n\r\n    TweenLite.from(header, 1,{autoAlpha: 0, x:-100, delay:0.25});\r\n    TweenLite.from(sub, 1, {autoAlpha: 0, delay:1});\r\n    TweenLite.from(nav, 1, {autoAlpha: 0, delay:1});\r\n})(jQuery);\r\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("(function($){\r\n    var header = $('#title'),\r\n        sub = $('.subtitle'),\r\n        nav = $('#navbar');\r\n\r\n    TweenLite.from(header, 1,{autoAlpha: 0, x:-100, delay:0.25});\r\n    TweenLite.from(sub, 1, {autoAlpha: 0, delay:1});\r\n    TweenLite.from(nav, 1, {autoAlpha: 0, delay:1});\r\n})(jQuery);\r\n\n\n//# sourceURL=webpack:///./src/JavaScript/main.js?");
 
 /***/ })
 
