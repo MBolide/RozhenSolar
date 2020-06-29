@@ -13,7 +13,7 @@
         <title>
             Rate my CS course -
             {% block title_block %}
-                A WAD2 Group Project
+            A WAD2 Group Project
             {% endblock %}
         </title>
     </head>
@@ -21,112 +21,116 @@
 	<body>
         <!--Navigation-->
         <div class="wrapper">
-        <nav class="navbar position-top navbar-expand-lg navbar-dark bg-dark pr-3" id="navbar">
-            <a class="navbar-brand px-3" href="#">
-                <img src="{% static 'images/logoTransp.png' %}" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">News</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Instruments
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">15cm Coronagraph</a>
-                    <a class="dropdown-item" href="#">30cm Chromosphere Telescope</a>
-                    <a class="dropdown-item" href="#">Cameras</a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Research
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Projects</a>
-                    <a class="dropdown-item" href="#">Publications</a>
-                    <a class="dropdown-item" href="#">Presentations</a>
-                    <a class="dropdown-item" href="#">Data Archive</a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Education
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent w-100">
+                <div class="d-flex flex-grow-1">
+                    <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+                    <a href="" class="navbar-brand d-none d-lg-inline-block" >
+                        <img src="{% static 'images/logoTransp.png' %}" alt="Logo">
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Gallery</a>
-                      <a class="dropdown-item" href="#">Popular presentations</a>
-                      <a class="dropdown-item" href="#">Education</a>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Contact
+                    <a href="#" class="navbar-brand-two mx-auto d-lg-none d-inline-block" >
+                        <img src="{% static 'images/logoTransp.png' %}" alt="Logo">
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Staff</a>
-                      <a class="dropdown-item" href="#">Address</a>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
-                  </li>
-              </ul>
-              <!--<form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>-->
-            </div>
-          </nav>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                    <ul class="navbar-nav ml-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a href="" class="nav-link m-2 menu-item nav-active" >Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link m-2 menu-item">News</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle m-2 menu-item" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Instruments
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'rozhen:base' %}">15cm Coronagraph</a>
+                                <a class="dropdown-item" href="">30cm Chromosphere Telescope</a>
+                                <a class="dropdown-item" href="">Cameras</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle m-2 menu-item" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Research
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="">Projects</a>
+                                <a class="dropdown-item" href="">Publications</a>
+                                <a class="dropdown-item" href="">Presentations</a>
+                                <a class="dropdown-item" href="">Data Archive</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle m-2 menu-item" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Education
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="">Gallery</a>
+                                <a class="dropdown-item" href="">Popular presentations</a>
+                                <a class="dropdown-item" href="">Education</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle m-2 menu-item" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Contact
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="">Staff</a>
+                                <a class="dropdown-item" href="">Address</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
         </div>
         
         <main>
             {% block body_block %}
             {% endblock %}
         </main>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="{% static 'js/index.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+        <footer>
+            <div class="container padding">
+                <div class="row padding">
+                    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+                        <div id="map">
+                            <iframe width='100%' height='100%' id='mapcanvas' src='https://maps.google.com/maps?q=Bulgarian%20National%20Astronomical%20Observatory&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=&amp;output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'><div class="zxos8_gm">Not sure if you have <a href="https://www.vouchersort.co.uk/hush-uk.com">found it but hotukdeals</a> is sometimes not the best place</div><div style='overflow:hidden;'><div id='gmap_canvas' style='height:100%;width:100%;'></div></div><div><small>Powered by <a href="https://www.embedgooglemap.co.uk">Embed Google Map</a></small></div></iframe>
+                        </div>
+                        
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 text-left pt-1">
+                        <a href="#"><img src="{% static 'images/logoTransp.png' %}" alt="Logo"></a>
+                        <h5>Solar Observations in Bulgaria</h5>
+                        <hr>
+                        <h5>Address 1</h5>
+                        <p>NAO Rozhen</p>
+                        <p>PO Box 136</p>
+                        <p>4700 Smolyan</p>
+                        <p>Bulgaria</p>
+                        <h6>Phone: <a id="phone" href="tel:+359 879 603456">+359 879 603456</a></h6>
+                    </div>
+                    <div class="col-sm-12 col-md-4 text-right pt-3">
+                        <h5>Address 2</h5>
+                        <p>72 Tsarigradsko Chaussee Blvd.</p>
+                        <p>1784 Sofia</p>
+                        <p>Bulgaria</p>
+                        <p>Email: <a id="phone" href="mailto:office@astro.bas.b">office@astro.bas.b</a></p>
+                        <h6>Phone: <a id="phone" href="tel:+359 2 9741910">+359 2 9741910</a></h6>
+                        <hr>
+                        <a href="http://nao-rozhen.org/"><img id="NAO" src="{% static 'images/nao.png' %}" width="100" height="58" alt="NAO Rozhen"></a>
+                        <a href="http://www.bas.bg/"><img id="BAN" src="{% static 'images/ban.png' %}" width="105" height="57" alt="BAS Bulgaria"></a>   
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="{% static 'js/index.js' %}"></script>
     </body>
-            <footer>
-    <div class="container padding">
-    <div class="row padding">
-      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
-        <div id="map">
-          <iframe width='100%' height='100%' id='mapcanvas' src='https://maps.google.com/maps?q=Bulgarian%20National%20Astronomical%20Observatory&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=&amp;output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'><div class="zxos8_gm">Not sure if you have <a href="https://www.vouchersort.co.uk/hush-uk.com">found it but hotukdeals</a> is sometimes not the best place</div><div style='overflow:hidden;'><div id='gmap_canvas' style='height:100%;width:100%;'></div></div><div><small>Powered by <a href="https://www.embedgooglemap.co.uk">Embed Google Map</a></small></div></iframe>
-        </div>
-        
-      </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 text-left pt-1">
-      <a href="#"><img src="{% static 'images/logoTransp.png' %}" alt="Logo"></a>
-        <h5>Solar Observations in Bulgaria</h5>
-        <hr>
-        <h5>Address 1</h5>
-        <p>NAO Rozhen</p>
-        <p>PO Box 136</p>
-        <p>4700 Smolyan</p>
-        <p>Bulgaria</p>
-        <h6>Phone: <a id="phone" href="tel:+359 879 603456">+359 879 603456</a></h6>
-    </div>
-    <div class="col-sm-12 col-md-4 text-right pt-3">
-      <h5>Address 2</h5>
-      <p>72 Tsarigradsko Chaussee Blvd.</p>
-      <p>1784 Sofia</p>
-      <p>Bulgaria</p>
-      <p>Email: <a id="phone" href="mailto:office@astro.bas.b">office@astro.bas.b</a></p>
-      <h6>Phone: <a id="phone" href="tel:+359 2 9741910">+359 2 9741910</a></h6>
-      <hr>
-      <a href="http://nao-rozhen.org/"><img id="NAO" src="{% static 'images/nao.png' %}" width="100" height="58" alt="NAO Rozhen"></a>
-    <a href="http://www.bas.bg/"><img id="BAN" src="{% static 'images/ban.png' %}" width="105" height="57" alt="BAS Bulgaria"></a>   
-  </div>
-  </div>
-</div>
-</footer>
+    
 </html>
